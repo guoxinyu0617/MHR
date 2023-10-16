@@ -1,2 +1,1 @@
-# MHR
-Code for paper MHR
+# MHR: A Multi-modal Hyperbolic Representation Framework for Fake News Detection
