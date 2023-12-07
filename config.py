@@ -31,7 +31,6 @@ config_args = {
         'c': (1.0, 'hyperbolic radius, set to None for trainable curvature'),
         'r': (2., 'fermi-dirac decoder parameter'),
         't': (1., 'fermi-dirac decoder parameter'),
-        'margin': (1., 'margin of MarginLoss'),
         'hidden_size': (512, 'hidden size'),
         'pretrained-embeddings': (None, 'path to pretrained embeddings (.npy file) for Shallow node classification'),
         'pos-weight': (0, 'whether to upweight positive class in node classification tasks'),
