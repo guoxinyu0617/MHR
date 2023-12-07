@@ -12,11 +12,11 @@ def acc_f1(output, labels, average='binary'):
     return accuracy, f1, report
 
 
-class MarginLoss(torch.nn.Module):
-    def __init__(self, margin) -> None:
-        super().__init__()
-        self.margin = margin
+# class MarginLoss(torch.nn.Module):
+#     def __init__(self, margin) -> None:
+#         super().__init__()
+#         self.margin = margin
 
-    def forward(self, preds):
-        correct_preds = preds[..., 0:1]
-        return torch.nn.functional.relu(self.margin - correct_preds + preds).mean()
+#     def forward(self, preds):
+#         correct_preds = preds[..., 0:1]
+#         return torch.nn.functional.relu(self.margin - correct_preds + preds).mean()
