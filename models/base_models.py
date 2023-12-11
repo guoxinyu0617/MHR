@@ -110,11 +110,6 @@ class NCModel(BaseModel):
     def compute_metrics(self, embeddings, data, split):
         idx = data[f'idx_{split}']
         output = self.decode(embeddings, data['adj_train_norm'], idx)
-        # if self.manifold_name == 'Lorentz':
-        #     correct = output.gather(1, data['labels'][idx].unsqueeze(-1))
-        #     loss = F.relu(self.margin - correct + output).mean()
-        # else:
-        #     loss = F.cross_entropy(output, data['labels'][idx], self.weights)
         loss = F.cross_entropy(output, data['labels'][idx], self.weights)
         acc, f1, classification_report = acc_f1(output, data['labels'][idx], average=self.f1_average)
         metrics = {'loss': loss, 'acc': acc, 'f1': f1}
