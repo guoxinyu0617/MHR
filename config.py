@@ -28,7 +28,7 @@ config_args = {
         'model': ('HyboNet', 'HyboNet encoder'),
         'dim': (32, 'embedding dimension'),
         'manifold': ('Lorentz', 'Lorentz manifold'),
-        'c': (1.0, 'hyperbolic radius, set to None for trainable curvature'),
+        'c': (None, 'hyperbolic radius, set to None for trainable curvature'),
         'r': (2., 'fermi-dirac decoder parameter'),
         't': (1., 'fermi-dirac decoder parameter'),
         'hidden_size': (512, 'hidden size'),
